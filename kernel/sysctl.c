@@ -2949,6 +2949,14 @@ static struct ctl_table vm_table[] = {
 		.extra1		= SYSCTL_ZERO,
 	},
 	{
+		.procname	= "skip_mapcount",
+		.data		= &skip_mapcount,
+		.maxlen		= sizeof(skip_mapcount),
+		.mode		= 0644,
+		.proc_handler	= skip_mapcount_sysctl_handler,
+		.extra1		= SYSCTL_ZERO,
+	},
+	{
 		.procname	= "watermark_boost_factor",
 		.data		= &watermark_boost_factor,
 		.maxlen		= sizeof(watermark_boost_factor),
